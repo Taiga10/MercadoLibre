@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    {{name}} - ¡{{ title }}!
+  </h1>
+  <img width="300" alt="Fernanda Vega Logo" src="https://scontent.feoh2-1.fna.fbcdn.net/v/t1.0-9/68461333_10218197381902204_5057828237380419584_n.jpg?_nc_cat=108&_nc_oc=AQmlfBcjrQaThCwPT3jcRbhabJdIJgW_3WbyAXbwqdvdl_4MLZf33uzWOFnL0-v2WoM&_nc_ht=scontent.feoh2-1.fna&oh=7f441acb62b42aa33fe5ff5cfd3b843b&oe=5DEB8D8F">
+</div>
+
+<div class="search-content">
+<h2>¿Qué deseas buscar?</h2>
+
+<input class="search-text" [(ngModel)]="busqueda" placeholder="Producto a buscar"/>
+<button (click)="getProduct()" class="search">Buscar</button>
+
+</div>
+
+<div class="productos" *ngIf="productos">
+  <app-productos *ngFor="let producto of productos" [producto]="producto"></app-productos>
+</div>

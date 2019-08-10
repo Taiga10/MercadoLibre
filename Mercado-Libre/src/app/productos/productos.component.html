@@ -1,0 +1,6 @@
+<a class="producto" target="_blank" [href]="producto.permalink">
+  <img [src]="producto.thumbnail" class="img">
+  <p class="producto" >{{producto.title}}</p>
+  <p class="producto">Vendedor: {{producto.seller.id}} - {{producto.seller.power_seller_status}}</p>
+  <p class="producto">{{producto.price | currency}} - {{producto.condition}} </p>
+</a>
